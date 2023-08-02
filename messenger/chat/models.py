@@ -5,7 +5,7 @@ from django.db import models
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     nickname = models.CharField(max_length=255)
-    avatar = models.ImageField(upload_to='images')
+    avatar = models.ImageField(upload_to='images', height_field=None, width_field=None)
 
     def __str__(self):
         return self.nickname
