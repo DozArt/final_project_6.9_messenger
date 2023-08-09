@@ -1,15 +1,15 @@
 {% extends 'flatpages/default.html' %}
 {% block title %}
-Users
+Chat
 {% endblock title %}
 
 {% block content %}
-<h1>Пользователи</h1>
-{% for user_detail in users %}
+<h1>{{ chat_detail }}</h1>
+{% for chat_detail in chats %}
     <hr>
     <h4>
-        <a href="{% url 'user_detail' user_detail.id %}">
-            {{ user_detail }}
+        <a href="{% url 'chat_detail' chat_detail.id %}">
+            {{ chat_detail }}
         </a>
     </h4>
 {% endfor %}
